@@ -1,0 +1,11 @@
+'{
+  "id": 0,
+  "project_name": "Random Quote Generator",
+  "description": "Generates a random quote at the click of the button, refreshes on its own",
+  "technologies": [
+    "html", "css", "javascript"
+  ],
+  "live_link": "https://johnreed503.github.io/techdegree-01/",
+  "github_link": "https://github.com/johnreed503/techdegree-01",
+  "image_urls": ["main": "images/randomQuoteMain", "image1": "images/randomQuote1"]
+}'
