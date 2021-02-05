@@ -1,6 +1,6 @@
 
 'use strict';
-
+console.log('hello')
 /**
  * Handle mobile menu functionality to hide/reveal sidebar on mobile layouts
  */
