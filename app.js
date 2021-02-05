@@ -14,8 +14,20 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/project', (req, res) => {
+app.get('/about', (req, res) => {
+  res.render('about');
+});
+
+app.get('/project/id', (req, res) => {
   res.render('project');
+});
+
+app.get('/error', (req, res) => {
+  res.render('error');
+});
+
+app.get('/page-not-found', (req, res) => {
+  res.render('page-not-found');
 });
 
 app.listen(3000, () => {
