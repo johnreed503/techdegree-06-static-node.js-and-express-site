@@ -6,7 +6,7 @@ app.use(express.static('public'));
 
 const projectdata = require('./data.json')
 console.log('hello')
-console.log(projectdata.projects[0].live_link)
+console.log(projectdata.projects[0].description)
 // const data = jsondata.json()
 // console.log(data)
 
@@ -26,8 +26,17 @@ app.get('/error', (req, res) => {
   res.render('error');
 });
 
-app.get('/page-not-found', (req, res) => {
-  res.render('page-not-found');
+
+app.use((req, res, next) => {
+  const err = new Error('NOT FOUND');
+  err.status = 404;
+  next(err);
+})
+
+app.use((err, req, res, next) => {
+  res.locals.error = err;
+  res.status(err.status);
+  res.render('error', err);
 });
 
 app.listen(3000, () => {
