@@ -6,38 +6,26 @@ app.use(express.static('public'));
 
 const projectdata = require('./data.json')
 console.log('hello')
-console.log(projectdata.projects[0].description)
-// const data = jsondata.json()
-// console.log(data)
+console.log(projectdata.projects[0].github_link)
+const gitHub = projectdata.projects[0].github_link
+console.log(gitHub)
 
+
+
+console.log('this is a test')
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {data: 'Portfolio'});
 });
 
 app.get('/about', (req, res) => {
-  res.render('about');
+  res.render('about', {gitHubLink: gitHub});
 });
 
 app.get('/project/id', (req, res) => {
   res.render('project');
 });
 
-app.get('/error', (req, res) => {
-  res.render('error');
-});
 
-
-app.use((req, res, next) => {
-  const err = new Error('NOT FOUND');
-  err.status = 404;
-  next(err);
-})
-
-app.use((err, req, res, next) => {
-  res.locals.error = err;
-  res.status(err.status);
-  res.render('error', err);
-});
 
 app.listen(3000, () => {
   console.log('the application is running on localhost:3000!')
