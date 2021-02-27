@@ -12,7 +12,7 @@ console.log(gitHub)
 
 
 
-console.log('this is a test')
+
 app.get('/', (req, res) => {
   res.render('index', {data: 'Portfolio'});
 });
@@ -21,7 +21,7 @@ app.get('/about', (req, res) => {
   res.render('about', {gitHubLink: gitHub});
 });
 
-app.get('/project/id', (req, res) => {
+app.get('/project', (req, res) => {
   res.render('project');
 });
 
