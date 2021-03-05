@@ -14,7 +14,7 @@ html(lang="en" dir="ltr")
       .sidebar-info-box
         br
         .thumbnail-box
-          img.thumbnail(src='/images/profilePic.JPG', alt='')
+          img.thumbnail(src='/images/profilePic.png', alt='')
           //img.thumbnail(src='https://placehold.it/550x350', alt='')
         .dev-intro-box
 
@@ -22,10 +22,10 @@ html(lang="en" dir="ltr")
           h5 Justin Reed
 
           //- Replace with description of who you are, what you do, and why you are so awesome
-          p Description
+          p Fullstack JavaScript developer looking to join a team that can provide mentorship
 
           //- Add path from your '/about' route handler to the href below
-          a(href='') Learn More &rarr;
+          a(href='/about') Learn More &rarr;
 
     .wrapper
       .header
@@ -37,6 +37,8 @@ html(lang="en" dir="ltr")
 
       block content
 
-//TODO, I believe this was part of the provided files but its causing an error I do not understand
-  //script(src='/static/js/script.js')
+//TODO, I believe this was part of the provided files but its causing an error I do not understand, edit, its working now?
+
+  script(src='/js/script.js')
+  
   

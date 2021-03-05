@@ -11,9 +11,79 @@
       "live_link": "https://johnreed503.github.io/techdegree-01/",
       "github_link": "https://github.com/johnreed503/techdegree-01",
       "image_urls":
+
+        {
+        "main": "/images/randomMain.png", "first": "/images/random1.png", "second": "/images/random2.png", "third": "/images/random3.png"
+        }
+
+    },
+    {
+      "id": 1,
+      "project_name": "Data Pagination and Filtering",
+      "description": "Displays 9 profiles, allows you to page through the rest of the profile and filter via a search bar",
+      "technologies":
         [
-          "images/randomQuoteMain.png", "images/randomQuote1.png"
-        ]
+          "html", "css", "javascript"
+        ],
+      "live_link": "https://johnreed503.github.io/techdegree-02-data-pagination-and-filtering/",
+      "github_link": "https://github.com/johnreed503/techdegree-02-data-pagination-and-filtering",
+      "image_urls":
+
+        {
+        "main": "/images/paginationMain.png", "first": "/images/pagination1.png", "second": "/images/pagination2.png", "third": "/images/pagination3.png"
+        }
+
+    },
+    {
+      "id": 2,
+      "project_name": "Interactive Form",
+      "description": "Collects and validates form data",
+      "technologies":
+        [
+          "html", "css", "javascript"
+        ],
+      "live_link": "https://johnreed503.github.io/techdegree-03-interactive-form/",
+      "github_link": "https://github.com/johnreed503/techdegree-03-interactive-form",
+      "image_urls":
+
+        {
+        "main": "/images/formMain.png", "first": "/images/form1.png", "second": "/images/form2.png", "third": "/images/form3.png"
+        }
+
+    },
+    {
+      "id": 3,
+      "project_name": "OOP Gameshow App",
+      "description": "Object oriented gameshow app, try to guess the phrase!",
+      "technologies":
+        [
+          "html", "css", "javascript"
+        ],
+      "live_link": "https://johnreed503.github.io/techdegree-04-OOP-gameshow-app/",
+      "github_link": "https://github.com/johnreed503/techdegree-04-OOP-gameshow-app",
+      "image_urls":
+
+        {
+        "main": "/images/oopMain.png", "first": "/images/oop1.png", "second": "/images/oop2.png", "third": "/images/oop3.png"
+        }
+
+    },
+    {
+      "id": 4,
+      "project_name": "Public API Requests",
+      "description": "Employee directory created using API request",
+      "technologies":
+        [
+          "html", "css", "javascript"
+        ],
+      "live_link": "https://johnreed503.github.io/techdegree-05-public-api-requests/",
+      "github_link": "https://github.com/johnreed503/techdegree-05-public-api-requests",
+      "image_urls":
+
+        {
+        "main": "/images/apiMain.png", "first": "/images/api1.png", "second": "/images/api2.png", "third": "/images/api3.png"
+        }
+
     }
   ]
 }
