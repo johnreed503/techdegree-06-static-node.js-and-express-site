@@ -6,27 +6,46 @@ app.use(express.static('public'));
 
 const projectdata = require('./data.json')
 const projects = projectdata.projects
-console.log('hello from app.js')
-console.log(projectdata)
-//console.log(projectdata.projects[0].image_urls[0].main)
-const gitHub = projectdata.projects[0].github_link
-//console.log(gitHub)
-const mainPhoto = projectdata.projects[0].image_urls[0]
 
+
+
+// app.use((req, res, next) => {
+//   console.log('hello from errors')
+//   const err = new Error('oh noes!');
+//   err.status = 500;
+//   next(err);
+// });
 
 
 
 app.get('/', (req, res) => {
-  res.render('index', {photo: mainPhoto, projects});
+  res.render('index', {projects});
 });
 
 app.get('/about', (req, res) => {
-  res.render('about', {gitHubLink: gitHub});
+  res.render('about');
 });
 
 app.get('/project/:id', (req, res) => {
   res.render('project', {project: projects[req.params.id]});
 });
+
+
+app.use((req, res, next) => {
+  const err = new Error('Unfortunatly the internet could not find the page you were looking for')
+  err.status = 404
+  next(err);
+})
+
+app.use((err, req, res, next) => {
+  if (err.status === 404) {
+    res.status(err.status)
+    res.render('page-not-found', {error: err});
+  } else {
+  res.status(err.status)
+  res.render('error', {error: err});
+}
+})
 
 
 
