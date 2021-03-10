@@ -20,8 +20,14 @@ app.get('/about', (req, res) => {
 });
 
 //route for project page, passes in individual project based on the :id
-app.get('/project/:id', (req, res) => {
-  res.render('project', {project: projects[req.params.id]});
+app.get('/project/:id', (req, res, next) => {
+  if (projects[req.params.id] !== undefined) {
+    res.render('project', {project: projects[req.params.id]});
+  } else {
+    const err = new Error('Unfortunatly the internet could not find the project you were looking for')
+    err.status = 404
+    next(err);
+  }
 });
 
 //handles errors when a page is searched for but not found
@@ -36,6 +42,7 @@ app.use((err, req, res, next) => {
   if (err.status === 404) {
     res.status(err.status)
     res.render('page-not-found', {error: err});
+    console.error('Unfortunatly the internet could not find the page you were looking for')
   } else {
   res.status(err.status)
   res.render('error', {error: err});
