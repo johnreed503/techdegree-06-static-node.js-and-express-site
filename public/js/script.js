@@ -1,6 +1,5 @@
 
 'use strict';
-console.log('hello from script.js')
 /**
  * Handle mobile menu functionality to hide/reveal sidebar on mobile layouts
  */
